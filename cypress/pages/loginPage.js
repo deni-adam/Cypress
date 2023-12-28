@@ -1,19 +1,28 @@
-export class LoginPage {     
-    visit() {
-        return cy.visit('/');
-    }
-    
-    userName(username) { 
-        return cy.get('#username').type(username);
-      }
+export class LoginPage {
+  visit() {
+    return cy.visit("/");
+  }
 
-    password(password) {
-        return  cy.get("#password").type(password);
-    }
+  typeUserName(username) {
+    return cy.get("#username").type(username);
+  }
 
-    loginButton () {
-        return cy.get('.btn').contains('Login');
-    }
+  typePassword(password) {
+    return cy.get("#password").type(password);
+  }
 
-}   
+  clickOnLoginButton() {
+    return cy.get(".btn").contains("Login").click();
+  }
 
+  loginUser(typeUserName, typePassword) {
+    return (
+      this.typeUserName(typeUserName),
+      this.typePassword(typePassword),
+      this.clickOnLoginButton()
+    );
+  }
+}
+
+// login.typeUserName("cy_podzim_2023");
+// login.typePassword("CypressPodzim");
