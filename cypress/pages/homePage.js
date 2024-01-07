@@ -13,6 +13,7 @@ export class HomePage {
   }
 
   logOutUser() {
-    return this.getDropdownMenu().click(), this.selectLogOut().click();
+    this.getDropdownMenu().click();
+    this.selectLogOut().click();
   }
 }

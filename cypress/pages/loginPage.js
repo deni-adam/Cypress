@@ -22,11 +22,9 @@ export class LoginPage {
   }
 
   loginUser(typeUserName, typePassword) {
-    return (
-      this.typeUserName(typeUserName),
-      this.typePassword(typePassword),
-      this.clickOnLoginButton()
-    );
+    this.typeUserName(typeUserName);
+    this.typePassword(typePassword);
+    this.clickOnLoginButton();
   }
 }
 
