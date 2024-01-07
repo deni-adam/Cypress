@@ -1,30 +1,30 @@
+import { HomePage } from "./homePage";
 export class LoginPage {
   constructor() {
+    this.url = "/";
     this.usernameInput = "#username";
     this.passwordInput = "#password";
     this.loginButton = ".btn";
   }
 
-  visit() {
-    return cy.visit("/");
+  visitUrl() {
+    cy.visit(this.url);
+    return this;
   }
 
   typeUserName(username) {
     cy.get(this.usernameInput).type(username);
+    return this;
   }
 
   typePassword(password) {
     cy.get(this.passwordInput).type(password);
+    return this;
   }
 
   clickOnLoginButton() {
     cy.get(this.loginButton).contains("Login").click();
-  }
-
-  loginUser(typeUserName, typePassword) {
-    this.typeUserName(typeUserName);
-    this.typePassword(typePassword);
-    this.clickOnLoginButton();
+    return new HomePage();
   }
 }
 

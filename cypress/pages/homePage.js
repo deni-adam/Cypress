@@ -1,19 +1,17 @@
+import { LoginPage } from "../pages/loginPage";
 export class HomePage {
   constructor() {
     this.dropdownMenu = ".user-photo-header";
     this.logOut = "#logout";
   }
+
   getDropdownMenu() {
-    // return cy.get(".dropdown-toggle");
-    cy.get(this.dropdownMenu);
+    cy.get(this.dropdownMenu).click();
+    return this;
   }
 
-  selectLogOut() {
-    cy.get(this.logOut);
-  }
-
-  logOutUser() {
-    this.getDropdownMenu().click();
-    this.selectLogOut().click();
+  clickLogOut() {
+    cy.get(this.logOut).click();
+    return new LoginPage();
   }
 }
