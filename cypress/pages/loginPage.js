@@ -1,18 +1,24 @@
 export class LoginPage {
+  constructor() {
+    this.usernameInput = "#username";
+    this.passwordInput = "#password";
+    this.loginButton = ".btn";
+  }
+
   visit() {
     return cy.visit("/");
   }
 
   typeUserName(username) {
-    return cy.get("#username").type(username);
+    cy.get(this.usernameInput).type(username);
   }
 
   typePassword(password) {
-    return cy.get("#password").type(password);
+    cy.get(this.passwordInput).type(password);
   }
 
   clickOnLoginButton() {
-    return cy.get(".btn").contains("Login").click();
+    cy.get(this.loginButton).contains("Login").click();
   }
 
   loginUser(typeUserName, typePassword) {
