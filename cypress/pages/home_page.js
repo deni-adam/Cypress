@@ -1,4 +1,4 @@
-import { LoginPage } from "../pages/loginPage";
+import { LoginPage } from "./login_page";
 export class HomePage {
   constructor() {
     this.dropdownMenu = ".user-photo-header";

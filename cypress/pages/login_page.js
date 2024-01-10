@@ -1,4 +1,4 @@
-import { HomePage } from "./homePage";
+import { HomePage } from "./home_page";
 export class LoginPage {
   constructor() {
     this.url = "/";
