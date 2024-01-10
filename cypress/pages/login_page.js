@@ -1,10 +1,12 @@
 import { HomePage } from "./home_page";
+import { LostPasswordPage } from "./lost_password_page";
 export class LoginPage {
   constructor() {
     this.url = "/";
     this.usernameInput = "#username";
     this.passwordInput = "#password";
     this.loginButton = ".btn";
+    this.passwordForgotten = '#forget_password';
   }
 
   visitUrl() {
@@ -26,6 +28,12 @@ export class LoginPage {
     cy.get(this.loginButton).contains("Login").click();
     return new HomePage();
   }
+
+  clickForgottenPassword() {
+    cy.get(this.passwordForgotten).click();
+    return new LostPasswordPage();
+  }
+
 }
 
 // login.typeUserName("cy_podzim_2023");
