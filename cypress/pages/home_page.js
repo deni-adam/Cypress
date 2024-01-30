@@ -5,7 +5,7 @@ export class HomePage {
     this.logOut = "#logout";
   }
 
-  getDropdownMenu() {
+  clickProfile() {
     cy.get(this.dropdownMenu).click();
     return this;
   }

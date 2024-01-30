@@ -5,6 +5,6 @@ it("log in and log out", () => {
     .typeUserName("cy_podzim_2023")
     .typePassword("CypressPodzim")
     .clickOnLoginButton()
-    .getDropdownMenu()
+    .clickProfile()
     .clickLogOut();
 });
