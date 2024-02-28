@@ -1,5 +1,6 @@
 import { LoginPage } from "../pages/login_page.js";
-import { HomePage } from "../pages/home_page";
+import { MenuSection } from "../pages/menu_section.js";
+import { ProjectsPage } from "../pages/projects_page.js";
 
 describe("Polymorhism tests", () => {
   beforeEach(() => {
@@ -9,7 +10,9 @@ describe("Polymorhism tests", () => {
       .typePassword("CypressPodzim")
       .clickOnLoginButton();
   });
-  it("Logout via polymorphism class", () => {
-    new HomePage().clickProfile().clickLogOut();
+  it("create new project and new ticket", () => {
+    new ProjectsPage()
+    .clickAddProjectButton
+    .type
   });
 });
