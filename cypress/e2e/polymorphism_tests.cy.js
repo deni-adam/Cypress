@@ -1,6 +1,5 @@
 import { LoginPage } from "../pages/login_page.js";
 import { MenuSection } from "../pages/menu_section.js";
-import { ProjectsPage } from "../pages/projects_page.js";
 
 describe("Polymorhism tests", () => {
   beforeEach(() => {
@@ -11,8 +10,10 @@ describe("Polymorhism tests", () => {
       .clickOnLoginButton();
   });
   it("create new project and new ticket", () => {
-    new ProjectsPage()
-    .clickAddProjectButton
-    .type
+    new MenuSection()
+      .clickProjects()
+      .clickAddProjectButton()
+      .typeNameOfProject('projekt ABC')
+      .clickSaveProjectButton();
   });
 });
