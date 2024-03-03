@@ -4,7 +4,6 @@ export class ProjectsPage extends MenuSection {
   constructor() {
     super();
     this.addProjectButton = '[test_id="Add Project"]';
-    // this.tickets = ".selected > a";
     // this.addTicketButton = '[test_id="Add Ticket"]';
     // this.selectStatus = "#fields_186";
     // this.selectType = "#fields_183";
@@ -18,10 +17,6 @@ export class ProjectsPage extends MenuSection {
     return new NewProjectWindowPage();
   }
 
-  // goToTicketsOfProject() {
-  //   cy.get(this.tickets).contains("Tickets").click();
-  //   return this;
-  // }
 
   // clickAddTicketButton() {
   //   cy.get(this.addTicketButton).click();

@@ -13,7 +13,8 @@ export class NewProjectWindowPage extends ProjectsPage {
   }
 
   clickSaveProjectButton() {
+    const { ProjectDetailPage } = require("./project_detail_page.js");
     cy.get(this.saveProjectButton).click();
-    return new ProjectsPage();
+    return new ProjectDetailPage();
   }
 }
