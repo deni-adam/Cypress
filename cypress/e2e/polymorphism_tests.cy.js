@@ -9,11 +9,17 @@ describe("Polymorhism tests", () => {
       .typePassword("CypressPodzim")
       .clickOnLoginButton();
   });
-  it("create new project and new ticket", () => {
+  it("create new project", () => {
     new MenuSection()
       .clickProjects()
       .clickAddProjectButton()
-      .typeNameOfProject('projekt ABC')
-      .clickSaveProjectButton();
+      .typeNameOfProject("projekt ABC")
+      .clickSaveProjectButton()
+      .goToTicketsOfProject()
+      .clickAddTicketButton()
+      // .clickStatusSelect() // "Open"
+      // .clickTypeSelect() // "Report a bug"
+      .typeTicketSubject("Bug abc")
+      .clickSaveTicketButton();
   });
 });

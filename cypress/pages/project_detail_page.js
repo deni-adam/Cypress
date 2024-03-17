@@ -1,10 +1,14 @@
-export class ProjectDetailPage {
+import { ProjectsPage } from "./projects_page";
+
+export class ProjectDetailPage extends ProjectsPage {
   constructor() {
-    this.tickets = ".selected > a";
+    super();
+    this.projectTickets = ".nav > :nth-child(2) > a";
   }
- 
+
   goToTicketsOfProject() {
-    cy.get(this.tickets).contains("Tickets").click();
-    return this;
+    const { ProjectTicketsPage } = require("./project_tickets_page.js");
+    cy.get(this.projectTickets).click();
+    return new ProjectTicketsPage();
   }
 }
