@@ -3,10 +3,12 @@ import { MenuSection } from "../pages/menu_section.js";
 
 describe("Polymorhism tests", () => {
   beforeEach(() => {
+    const username = Cypress.env("pmtool_username");
+    const password = Cypress.env("pmtool_password");
     new LoginPage()
       .visitUrl()
-      .typeUserName("cy_podzim_2023")
-      .typePassword("CypressPodzim")
+      .typeUserName(username)
+      .typePassword(password)
       .clickOnLoginButton();
   });
   it("create new project", () => {
