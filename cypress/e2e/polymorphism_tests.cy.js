@@ -1,3 +1,4 @@
+import { HomePage } from "../pages/home_page.js";
 import { LoginPage } from "../pages/login_page.js";
 import { MenuSection } from "../pages/menu_section.js";
 
@@ -19,8 +20,10 @@ describe("Polymorhism tests", () => {
       .clickSaveProjectButton()
       .goToTicketsOfProject()
       .clickAddTicketButton()
-      // .clickStatusSelect() // "Open"
-      // .clickTypeSelect() // "Report a bug"
+      // TODO - přidat parametr: select (při psaní testu se vybírá status pro výběr v selectu, např. "Open")
+      .clickStatusSelect() // "Open"
+      // TODO - dtto parametr: select
+      .clickTypeSelect() // "Report a bug"
       .typeTicketSubject("Bug abc")
       .clickSaveTicketButton();
   });
