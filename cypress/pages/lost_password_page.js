@@ -22,6 +22,7 @@ export class LostPasswordPage {
     cy.get(this.sendButton).click();
     return this;
     // return this nebo neco jineho??
+    // TODO: vracet LoginPage
   }
 
   clickBackButton() {

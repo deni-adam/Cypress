@@ -1,5 +1,5 @@
 import { ProjectsPage } from "./projects_page";
-
+// TODO: odstranit extends ProjectsPage, nedávat žádný extends
 export class NewProjectWindowPage extends ProjectsPage {
   constructor() {
     super();

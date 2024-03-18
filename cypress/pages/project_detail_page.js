@@ -1,5 +1,6 @@
 import { ProjectsPage } from "./projects_page";
 
+// TODO: odstranit extends ProjectsPage, nahradit za extends HeaderSection
 export class ProjectDetailPage extends ProjectsPage {
   constructor() {
     super();

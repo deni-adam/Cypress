@@ -1,5 +1,6 @@
 import { HeaderSection } from "./header_section.js";
 
+// TODO: MenuSection má extendovat HeaderSection
 export class MenuSection extends HeaderSection {
   constructor() {
     super();
